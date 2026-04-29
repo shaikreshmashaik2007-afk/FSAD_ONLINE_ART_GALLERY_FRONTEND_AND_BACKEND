@@ -1,5 +1,5 @@
 const API_CONFIG = {
-    BASE_URL: import.meta.env.VITE_BACKEND_URL || 'http://localhost:8082',
+    BASE_URL: import.meta.env.VITE_BACKEND_URL || 'https://fsad-online-art-gallery-frontend-and.onrender.com',
     ENDPOINTS: {
         AUTH: {
             LOGIN: '/api/auth/login',
