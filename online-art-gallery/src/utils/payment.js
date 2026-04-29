@@ -6,7 +6,7 @@
 import { isLoggedIn } from './auth.js';
 
 // Backend API base URL
-const BACKEND_URL = 'http://localhost:8082';
+const BACKEND_URL = 'https://fsad-online-art-gallery-frontend-and.onrender.com';
 
 /**
  * Load Razorpay checkout script dynamically
