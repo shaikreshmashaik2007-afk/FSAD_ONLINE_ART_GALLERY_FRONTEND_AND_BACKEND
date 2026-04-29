@@ -20,7 +20,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/api/payments")
-@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174", "http://localhost:3000"})
+@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174", "http://localhost:3000","https://online-art-gallery-frontend.vercel.app/"})
 public class PaymentController {
 
     private final RazorpayService razorpayService;
