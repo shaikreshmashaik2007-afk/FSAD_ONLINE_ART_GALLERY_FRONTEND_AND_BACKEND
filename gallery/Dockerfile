@@ -1,18 +1,10 @@
-# Build stage (uses official Maven image with JDK)
-FROM maven:3.9.9-amazoncorretto-21 AS build
+FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /app
-
-# Copy project files
 COPY pom.xml .
-COPY mvnw .
-COPY .mvn .mvn
 COPY src ./src
+RUN mvn clean package -DskipTests
 
-# Build the application
-RUN mvn -B -DskipTests package
-
-# Final stage (runtime)
-FROM eclipse-temurin:21-jdk AS runtime
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
