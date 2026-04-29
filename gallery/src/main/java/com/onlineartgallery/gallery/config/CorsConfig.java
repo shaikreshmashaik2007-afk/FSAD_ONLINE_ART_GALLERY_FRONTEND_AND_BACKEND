@@ -18,7 +18,8 @@ public class CorsConfig {
         config.setAllowedOrigins(Arrays.asList(
             "http://localhost:5173",  // Vite default
             "http://localhost:5174",  // Vite alternate
-            "http://localhost:3000"   // React default
+            "http://localhost:3000",
+            "https://online-art-gallery-frontend.vercel.app/"  // React default
         ));
         
         // Allow all standard methods
